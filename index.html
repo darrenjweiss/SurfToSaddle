@@ -15,12 +15,12 @@
         }
         .hero-section {
             /*
-                TO HARDLINK YOUR OWN IMAGE:
-                Replace 'YOUR_BUCKING_SALMON_IMAGE_PATH_HERE.jpg' with the actual path or URL to your image.
-                Example: background-image: url('images/my-bucking-salmon.jpg');
+                Updated to 'contain' to ensure the entire image is viewable.
+                The image source is now set to 'Salmon.png'.
             */
             background-image: url('Salmon.png');
-            background-size: cover;
+            background-size: contain; /* Changed from 'cover' to 'contain' */
+            background-repeat: no-repeat; /* Prevent image repetition */
             background-position: center;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
