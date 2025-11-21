@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surf To Saddle - Pacific Northwest Lifestyle</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Light background */
         }
-        /* No specific background image or flex properties for .hero-section anymore */
+        
         .hero-section {
             background-color: #1a202c; /* Dark background for the whole hero section */
             color: white;
             padding-top: 4rem; /* Add padding to the top */
             padding-bottom: 4rem; /* Add padding to the bottom */
         }
+        
         .hero-image-container {
             /* Set the image as background for this specific container */
             background-image: url('OilSalmon.png');
-            background-size: contain; /* Ensures the entire image is visible */
+            /* *** MODIFIED LINE: Changed 'contain' to 'cover' ***
+                'cover' ensures the image fills the container, which looks better for heroes. 
+            */
+            background-size: cover; 
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
@@ -31,6 +37,7 @@
             border-radius: 0.75rem; /* Rounded corners for the image container */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for the image container */
         }
+        
         .hero-content {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Keep text shadow for readability */
             padding: 2rem 0; /* Padding for the text content */
