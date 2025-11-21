@@ -21,18 +21,7 @@
             padding-bottom: 4rem; 
         }
         
-        .hero-image-container {
-            background-image: url('OilSalmon.png');
-            background-size: cover; 
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 100%;
-            min-height: 300px; 
-            height: 50vw; 
-            max-height: 600px; 
-            border-radius: 0.75rem; 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-        }
+        /* Removed: .hero-image-container styles */
         
         .hero-content {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
@@ -118,33 +107,35 @@
     </header>
 
     <section id="hero-section" class="hero-section">
-        <div class="container mx-auto px-4 flex flex-col items-center">
+        <div class="container mx-auto px-4">
             
-            <div class="flex flex-col-reverse md:flex-col items-center w-full">
+            <div class="flex flex-col md:flex-row items-center justify-between w-full">
                 
-                <div id="hero-content" class="text-center max-w-3xl hero-content">
+                <div id="hero-content" class="text-center md:text-left md:w-1/2 hero-content md:pr-12 lg:pr-16 order-2 md:order-1">
                     
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
                         Embrace the Spirit of the Pacific Northwest
                     </h1>
-                    <p class="text-lg md:text-2xl mb-8">
+                    <p class="text-lg md:text-xl lg:text-2xl mb-8">
                         Where Redwood Giants Meet the Wild Pacific.
                     </p>
-                    <div class="my-8"> 
-                        <img src="VanGoghSalmon.png" alt="Van Gogh style salmon" class="mx-auto rounded-lg shadow-lg w-full max-w-xs sm:max-w-md">
+                    
+                    <div class="my-8 md:my-6"> 
+                        <img src="VanGoghSalmon.png" alt="Van Gogh style salmon" class="mx-auto md:mx-0 rounded-lg shadow-xl w-full max-w-xs">
                     </div>
+                    
                     <a href="#collections" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
                         Explore Our Collection
                     </a>
                 </div>
 
-                <div class="hero-image-container w-full max-w-5xl mb-8 md:mb-8">
+                <div class="w-full md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+                    <img src="OilSalmon.png" alt="Oil painted salmon illustration for hero banner" class="w-full object-cover rounded-xl shadow-2xl min-h-[300px] h-auto max-h-[600px]">
                 </div>
 
             </div>
         </div>
     </section>
-
     <section id="collections" class="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Signature Collections</h2>
@@ -167,7 +158,7 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Coastal & Ocean Essentials</h3>
                         <p class="text-gray-700 mb-4">Gear and accessories perfect for exploring the rugged Pacific coastline, from surfing to tide pooling.</p>
-                         <button onclick="showModal('SheriffCrab.png')" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                           <button onclick="showModal('SheriffCrab.png')" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
                             View Image
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </button>
@@ -197,5 +188,9 @@
             <p class="text-lg leading-relaxed mb-8">
                 Surf To Saddle was born in the charming Victorian village of Ferndale, California, nestled perfectly where the ancient redwood forests meet the wild, untamed Pacific Ocean. Our brand is a tribute to this unique intersection of landscapes and lifestyles. We curate and create items that embody the spirit of the Pacific Northwest, reflecting both the rugged outdoor environment and the independent spirit of our community.
             </p>
+            </div>
+    </section>
+</body>
+</html>
             
 
