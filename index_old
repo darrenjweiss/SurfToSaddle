@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf To Saddle - Pacific Northwest Lifestyle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+        }
+        /* No specific background image or flex properties for .hero-section anymore */
+        .hero-section {
+            background-color: #1a202c; /* Dark background for the whole hero section */
+            color: white;
+            padding-top: 4rem; /* Add padding to the top */
+            padding-bottom: 4rem; /* Add padding to the bottom */
+        }
+        .hero-image-container {
+            /* Set the image as background for this specific container */
+            background-image: url('OilSalmon.png');
+            background-size: contain; /* Ensures the entire image is visible */
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            min-height: 400px; /* Minimum height for the image container */
+            height: 50vw; /* Responsive height based on viewport width */
+            max-height: 600px; /* Maximum height to prevent it from getting too tall */
+            border-radius: 0.75rem; /* Rounded corners for the image container */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for the image container */
+        }
+        .hero-content {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Keep text shadow for readability */
+            padding: 2rem 0; /* Padding for the text content */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gray-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-tight text-white mb-4 md:mb-0">
+                Surf To Saddle
+            </a>
+
+            <nav>
+                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-lg">
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">Home</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">Shop</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">About</a></li>
+                    <li><a href="mailto:surftosaddle@gmail.com" class="hover:text-amber-400 transition duration-300 ease-in-out">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero-section" class="hero-section">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="hero-image-container w-full max-w-5xl mb-8">
+                </div>
+
+            <div id="hero-content" class="text-center max-w-3xl hero-content">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Embrace the Spirit of the Pacific Northwest
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Where Redwood Giants Meet the Wild Pacific.
+                </p>
+                <div class="my-8"> 
+                    <img src="VanGoghSalmon.png" alt="Van Gogh style salmon" class="mx-auto rounded-lg shadow-lg w-full max-w-md">
+                </div>
+                <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Explore Our Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Signature Collections</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/A0AEC0/FFFFFF?text=River+Tees" alt="River Tees" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">River & Forest Apparel</h3>
+                        <p class="text-gray-700 mb-4">Comfortable and durable clothing designed for adventures among the redwoods and along the riverbanks.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                            Shop Apparel
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/90CDF4/FFFFFF?text=Coastal+Gear" alt="Coastal Gear" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Coastal & Ocean Essentials</h3>
+                        <p class="text-gray-700 mb-4">Gear and accessories perfect for exploring the rugged Pacific coastline, from surfing to tide pooling.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                            Shop Ocean Gear
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/D1D5DB/FFFFFF?text=Local+Art" alt="Local Art" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Local Crafts & Home Goods</h3>
+                        <p class="text-gray-700 mb-4">Handcrafted items and unique decor that bring the essence of Ferndale and the PNW into your home.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                            Shop Home Goods
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8">Our Story</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                Surf To Saddle was born in the charming Victorian village of Ferndale, California, nestled perfectly where the ancient redwood forests meet the wild, untamed Pacific Ocean. Our brand is a tribute to this unique intersection of landscapes and lifestyles.
+            </p>
+            <p class="text-lg leading-relaxed">
+                We curate and create items that embody the spirit of the Pacific Northwest – from rugged outdoor wear for river adventures to cozy apparel for misty coastal mornings, and artisanal goods reflecting our local heritage. Join us in celebrating this incredible corner of the world.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2025 Surf To Saddle. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Facebook</a>
+                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Instagram</a>
+                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Pinterest</a>
+                <a href="mailto:surftosaddle@gmail.com" class="hover:text-white transition duration-300 ease-in-out">Email</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
