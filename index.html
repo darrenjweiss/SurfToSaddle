@@ -17,30 +17,27 @@
         .hero-section {
             background-color: #1a202c; /* Dark background for the whole hero section */
             color: white;
-            padding-top: 4rem; /* Add padding to the top */
-            padding-bottom: 4rem; /* Add padding to the bottom */
+            padding-top: 4rem; 
+            padding-bottom: 4rem; 
         }
         
         .hero-image-container {
-            /* Set the image as background for this specific container */
             background-image: url('OilSalmon.png');
-            /* *** MODIFIED LINE: Changed 'contain' to 'cover' ***
-                'cover' ensures the image fills the container, which looks better for heroes. 
-            */
             background-size: cover; 
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
-            min-height: 400px; /* Minimum height for the image container */
-            height: 50vw; /* Responsive height based on viewport width */
-            max-height: 600px; /* Maximum height to prevent it from getting too tall */
-            border-radius: 0.75rem; /* Rounded corners for the image container */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for the image container */
+            /* Lower min-height for mobile screens to reduce scrolling */
+            min-height: 300px; 
+            height: 50vw; 
+            max-height: 600px; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
         }
         
         .hero-content {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Keep text shadow for readability */
-            padding: 2rem 0; /* Padding for the text content */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+            padding: 2rem 0; 
         }
     </style>
 </head>
@@ -48,16 +45,17 @@
 
     <header class="bg-gray-900 text-white shadow-lg">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            
             <a href="#" class="text-3xl font-bold tracking-tight text-white mb-4 md:mb-0">
                 Surf To Saddle
             </a>
 
             <nav>
-                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-lg">
-                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">Home</a></li>
-                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">Shop</a></li>
-                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out">About</a></li>
-                    <li><a href="mailto:surftosaddle@gmail.com" class="hover:text-amber-400 transition duration-300 ease-in-out">Contact</a></li>
+                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-lg w-full md:w-auto text-center">
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out block">Home</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out block">Shop</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300 ease-in-out block">About</a></li>
+                    <li><a href="mailto:surftosaddle@gmail.com" class="hover:text-amber-400 transition duration-300 ease-in-out block">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -65,22 +63,28 @@
 
     <section id="hero-section" class="hero-section">
         <div class="container mx-auto px-4 flex flex-col items-center">
-            <div class="hero-image-container w-full max-w-5xl mb-8">
+            
+            <div class="flex flex-col-reverse md:flex-col items-center w-full">
+                
+                <div id="hero-content" class="text-center max-w-3xl hero-content">
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                        Embrace the Spirit of the Pacific Northwest
+                    </h1>
+                    <p class="text-lg md:text-2xl mb-8">
+                        Where Redwood Giants Meet the Wild Pacific.
+                    </p>
+                    <div class="my-8"> 
+                        <img src="VanGoghSalmon.png" alt="Van Gogh style salmon" class="mx-auto rounded-lg shadow-lg w-full max-w-xs sm:max-w-md">
+                    </div>
+                    <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Explore Our Collection
+                    </a>
                 </div>
 
-            <div id="hero-content" class="text-center max-w-3xl hero-content">
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-                    Embrace the Spirit of the Pacific Northwest
-                </h1>
-                <p class="text-xl md:text-2xl mb-8">
-                    Where Redwood Giants Meet the Wild Pacific.
-                </p>
-                <div class="my-8"> 
-                    <img src="VanGoghSalmon.png" alt="Van Gogh style salmon" class="mx-auto rounded-lg shadow-lg w-full max-w-md">
+                <div class="hero-image-container w-full max-w-5xl mb-8 md:mb-8">
                 </div>
-                <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Explore Our Collection
-                </a>
+
             </div>
         </div>
     </section>
