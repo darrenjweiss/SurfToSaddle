@@ -72,7 +72,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
                     <div class="relative overflow-hidden">
-                        <img src="AlohaCowboy2.png" alt="Outdoor Apparel" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                        <img src="AlohaCowboy2.png" alt="Outdoor Apparel" onclick="showModal('AlohaCowboy2.png')" class="cursor-pointer w-full h-64 object-cover transition duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Forest Apparel</h3>
@@ -85,7 +85,7 @@
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
                     <div class="relative overflow-hidden">
-                        <img src="SheriffCrab.png" alt="Coastal Gear" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                        <img src="SheriffCrab.png" alt="Coastal Gear" onclick="showModal('SheriffCrab.png')" class="cursor-pointer w-full h-64 object-cover transition duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Coastal Essentials</h3>
@@ -98,7 +98,7 @@
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
                     <div class="relative overflow-hidden">
-                        <img src="330Ocean.png" alt="Local Art - 330 Ocean" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                        <img src="330Ocean.png" alt="Local Art - 330 Ocean" onclick="showModal('330Ocean.png')" class="cursor-pointer w-full h-64 object-cover transition duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Local Art & Home</h3>
@@ -159,18 +159,28 @@
         function showModal(imageSrc) {
             modal.classList.remove('hidden');
             modalImg.src = imageSrc;
-            setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
+            // Small timeout to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
         }
 
         function closeModal() {
             modal.classList.add('opacity-0');
-            setTimeout(() => { modal.classList.add('hidden'); }, 300);
+            // Wait for transition to finish before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
         }
 
+        // Close if user clicks outside the image
         function closeModalOutside(event) {
-            if (event.target === modal) { closeModal(); }
+            if (event.target === modal) {
+                closeModal();
+            }
         }
 
+        // Close on Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape" && !modal.classList.contains('hidden')) {
                 closeModal();
