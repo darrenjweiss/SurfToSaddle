@@ -38,9 +38,66 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
             padding: 2rem 0; 
         }
+
+        /* CSS for the Modal (Image Pop-up) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; 
+            z-index: 100; /* High z-index to cover everything */
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
+
+    <script>
+        function showModal(imageSrc) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("img01");
+            
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 </head>
 <body class="antialiased">
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
 
     <header class="bg-gray-900 text-white shadow-lg">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
@@ -98,10 +155,10 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Outdoor & Forest Apparel</h3>
                         <p class="text-gray-700 mb-4">Comfortable and durable clothing designed for adventures among the redwoods and along the riverbanks.</p>
-                        <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
-                            Shop Apparel
+                        <button onclick="showModal('AlohaCowboy2.png')" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                            View Image
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -110,10 +167,10 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Coastal & Ocean Essentials</h3>
                         <p class="text-gray-700 mb-4">Gear and accessories perfect for exploring the rugged Pacific coastline, from surfing to tide pooling.</p>
-                        <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
-                            Shop Ocean Gear
+                         <button onclick="showModal('SheriffCrab.png')" class="text-amber-600 hover:text-amber-800 font-medium text-lg flex items-center">
+                            View Image
                             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -138,38 +195,9 @@
             
             <h3 class="text-2xl font-semibold mb-4 text-amber-300">Our Origin: Where the Wild West Meets the Wild Coast</h3>
             <p class="text-lg leading-relaxed mb-8">
-                Surf To Saddle was born in the charming Victorian village of Ferndale, California, nestled perfectly where the ancient redwood forests meet the wild, untamed Pacific Ocean. Our brand is a tribute to this unique intersection of landscapes and lifestyles.
+                Surf To Saddle was born in the charming **Victorian village of Ferndale, California**, nestled perfectly where the ancient redwood forests meet the wild, untamed Pacific Ocean. Our brand is a tribute to this unique intersection of landscapes and lifestyles—celebrating those who are equally at home on a surfboard as they are on horseback. We curate and create items that embody the spirit of the Pacific Northwest, reflecting both the rugged outdoor environment and the independent spirit of our community.
             </p>
-
+            
             <h3 class="text-2xl font-semibold mb-4 text-amber-300">The Ethos: Rugged & Refined</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div>
-                    <h4 class="text-xl font-bold mb-2"></h4>
-                    <p class="text-lg leading-relaxed text-gray-300">
-                        Inspired by the misty, cool mornings and the raw energy of the North Coast waves, our coastal collection emphasizes durability, water resistance, and comfort. We focus on gear and apparel built to withstand the elements.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-2"></h4>
-                    <p class="text-lg leading-relaxed text-gray-300">
-                        From the towering redwoods to the inland pastures, our forest and ranch apparel is designed for the trail. This collection features natural fibers, robust stitching, and timeless styling, reflecting the hardworking heritage and independent spirit of Northern California.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-400 py-8">
-        <div id="contact-us" class="container mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2025 Surf To Saddle. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Facebook</a>
-                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Instagram</a>
-                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Pinterest</a>
-                <a href="mailto:surftosaddle@gmail.com" class="hover:text-white transition duration-300 ease-in-out">Email</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Our design philosophy is dual-focused: Inspired by the misty, cool mornings and the raw energy of the North Coast waves, our coastal collection
