@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Only minimal custom fonts needed here */
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
@@ -99,14 +98,14 @@
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
                     <div class="relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/57534e/FFFFFF?text=Local+Art" alt="Local Art" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                        <img src="330Ocean.png" alt="Local Art - 330 Ocean" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Home Goods</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Local Art & Home</h3>
                         <p class="text-slate-600 mb-6">Handcrafted items that bring the PNW spirit into your home.</p>
-                        <a href="#" class="text-amber-600 font-bold hover:text-amber-800 flex items-center group-hover:translate-x-2 transition">
-                            Shop Now <span class="ml-2">&rarr;</span>
-                        </a>
+                        <button onclick="showModal('330Ocean.png')" class="text-amber-600 font-bold hover:text-amber-800 flex items-center group-hover:translate-x-2 transition">
+                            View Detail <span class="ml-2">&rarr;</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -160,28 +159,18 @@
         function showModal(imageSrc) {
             modal.classList.remove('hidden');
             modalImg.src = imageSrc;
-            // Add fade-in effect
-            setTimeout(() => {
-                modal.classList.remove('opacity-0'); 
-            }, 10);
+            setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
         }
 
         function closeModal() {
             modal.classList.add('opacity-0');
-            // Wait for transition to finish before hiding
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
+            setTimeout(() => { modal.classList.add('hidden'); }, 300);
         }
 
-        // Close when clicking the dark background
         function closeModalOutside(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
+            if (event.target === modal) { closeModal(); }
         }
 
-        // Close on Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape" && !modal.classList.contains('hidden')) {
                 closeModal();
